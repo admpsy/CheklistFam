@@ -1,0 +1,13 @@
+{
+  "name": "forklift-checklist-system",
+  "version": "1.0.0",
+  "description": "Sistema de Check-list de Empilhadeiras - Fam Logística",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "author": "Aldemir Garbino",
+  "license": "MIT"
+}
