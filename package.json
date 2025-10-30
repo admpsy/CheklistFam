@@ -4,6 +4,9 @@
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
     "start": "cd backend && npm start",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "install-all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
