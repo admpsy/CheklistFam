@@ -2,8 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "cd backend && node index.js"
+startCommand = "cd backend && npm start"
 
-[[services]]
-name = "web"
-run = "cd backend && node index.js"
+[build.environment]
+NODE_ENV = "production"
