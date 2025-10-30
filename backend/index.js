@@ -36,3 +36,21 @@ app.listen(PORT, () => {
   console.log(`📊 Sistema de Check-list de Empilhadeiras - Fam Logística`);
   console.log(`👨‍💻 Desenvolvido por Aldemir Garbino com auxílio de IA`);
 });
+// Adicione esta linha no final do backend/index.js
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ... todo o seu código atual ...
+
+// SERVE FRONTEND (Adicione estas linhas no FINAL)
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+});
+
+// Mantenha o app.listen existente
